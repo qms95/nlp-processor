@@ -5,4 +5,5 @@ app = Flask(__name__)
 generator = PoemGenerator(None)
 
 
-@app.route("
+@app.route("/")
+def ho
