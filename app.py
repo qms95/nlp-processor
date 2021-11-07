@@ -1,3 +1,3 @@
 from flask import Flask, render_template, redirect
 from generate_poem import PoemGenerator
-a
+app = Flask
