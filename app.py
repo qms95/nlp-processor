@@ -6,4 +6,5 @@ generator = PoemGenerator(None)
 
 
 @app.route("/")
-def ho
+def home():
+    re
