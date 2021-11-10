@@ -7,4 +7,4 @@ generator = PoemGenerator(None)
 
 @app.route("/")
 def home():
-    re
+    return redire
