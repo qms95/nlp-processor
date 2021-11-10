@@ -10,4 +10,4 @@ def home():
     return redirect('http://git.hallada.net/nlp/')
 
 
-@app.rout
+@app.route("/nlp/b
