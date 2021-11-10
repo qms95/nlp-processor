@@ -7,4 +7,6 @@ generator = PoemGenerator(None)
 
 @app.route("/")
 def home():
-    return redirect('http://git.hallada.n
+    return redirect('http://git.hallada.net/nlp/')
+
+
