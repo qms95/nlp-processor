@@ -11,4 +11,5 @@ def home():
 
 
 @app.route("/nlp/buzzfeed_haiku_generator/")
-def buzzfeed_haiku_generator
+def buzzfeed_haiku_generator():
+    ha
