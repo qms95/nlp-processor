@@ -15,4 +15,5 @@ def buzzfeed_haiku_generator():
     haiku = generator.generate_haiku()
     return render_template('buzzfeed-haiku-generator.html', haiku=haiku)
 
-if __name__ == '__main__
+if __name__ == '__main__':
+ 
