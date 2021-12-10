@@ -18,3 +18,10 @@ def count_syllables(word):
 
  # by M. Emre Aydin from http://eayd.in/?p=232
 def sylco(word) :
+ 
+    word = word.lower()
+ 
+    # exception_add are words that need extra syllables
+    # exception_del are words that need less syllables
+ 
+    exception_add = ['serious','crucial']
