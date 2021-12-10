@@ -35,3 +35,9 @@ def sylco(word) :
     syls = 0 #added syllable number
     disc = 0 #discarded syllable number
  
+    #1) if letters < 3 : return 1
+    if len(word) <= 3 :
+        syls = 1
+        return syls
+ 
+    #2) if doesn't end with "ted" or "tes" or "ses" or "ied" or "ies", discard "es" and "ed" at the end.
