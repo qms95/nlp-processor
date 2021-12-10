@@ -25,3 +25,13 @@ def sylco(word) :
     # exception_del are words that need less syllables
  
     exception_add = ['serious','crucial']
+    exception_del = ['fortunately','unfortunately']
+ 
+    co_one = ['cool','coach','coat','coal','count','coin','coarse','coup','coif','cook','coign','coiffe','coof','court']
+    co_two = ['coapt','coed','coinci']
+ 
+    pre_one = ['preach']
+ 
+    syls = 0 #added syllable number
+    disc = 0 #discarded syllable number
+ 
