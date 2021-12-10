@@ -72,3 +72,19 @@ def sylco(word) :
     numVowels = len(re.findall(r'[eaoui]',word))
  
     #6) add one if starts with "mc"
+    if word[:2] == "mc" :
+        syls+=1
+ 
+    #7) add one if ends with "y" but is not surrouned by vowel
+    if word[-1:] == "y" and word[-2] not in "aeoui" :
+        syls +=1
+ 
+    #8) add one if "y" is surrounded by non-vowels and is not in the last word.
+ 
+    for i,j in enumerate(word) :
+        if j == "y" :
+            if (i != 0) and (i != len(word)-1) :
+                if word[i-1] not in "aeoui" and word[i+1] not in "aeoui" :
+                    syls+=1
+ 
+    #9) if starts with "tri-" or "bi-" and is followed by a vowel, add one.
