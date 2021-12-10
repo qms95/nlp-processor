@@ -54,3 +54,10 @@ def sylco(word) :
     #3) discard trailing "e", except where ending is "le"  
  
     le_except = ['whole','mobile','pole','male','female','hale','pale','tale','sale','aisle','whale','while']
+ 
+    if word[-1:] == "e" :
+        if word[-2:] == "le" and word not in le_except :
+            pass
+ 
+        else :
+            disc+=1
