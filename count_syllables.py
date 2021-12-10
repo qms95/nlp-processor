@@ -61,3 +61,14 @@ def sylco(word) :
  
         else :
             disc+=1
+ 
+    #4) check if consecutive vowels exists, triplets or pairs, count them as one.
+ 
+    doubleAndtripple = len(re.findall(r'[eaoui][eaoui]',word))
+    tripple = len(re.findall(r'[eaoui][eaoui][eaoui]',word))
+    disc+=doubleAndtripple + tripple
+ 
+    #5) count remaining vowels in word.
+    numVowels = len(re.findall(r'[eaoui]',word))
+ 
+    #6) add one if starts with "mc"
