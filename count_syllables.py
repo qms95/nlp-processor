@@ -41,3 +41,6 @@ def sylco(word) :
         return syls
  
     #2) if doesn't end with "ted" or "tes" or "ses" or "ied" or "ies", discard "es" and "ed" at the end.
+    # if it has only 1 vowel or 1 set of consecutive vowels, discard. (like "speed", "fled" etc.)
+ 
+    if word[-2:] == "es" or word[-2:] == "ed" :
