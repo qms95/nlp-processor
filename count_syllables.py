@@ -88,3 +88,10 @@ def sylco(word) :
                     syls+=1
  
     #9) if starts with "tri-" or "bi-" and is followed by a vowel, add one.
+ 
+    if word[:3] == "tri" and word[3] in "aeoui" :
+        syls+=1
+ 
+    if word[:2] == "bi" and word[2] in "aeoui" :
+        syls+=1
+ 
