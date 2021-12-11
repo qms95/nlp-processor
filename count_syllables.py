@@ -101,3 +101,11 @@ def sylco(word) :
     #and (word[-4:] != "cian" or word[-4:] != "tian") :
         if word[-4:] == "cian" or word[-4:] == "tian" :
             pass
+        else :
+            syls+=1
+ 
+    #11) if starts with "co-" and is followed by a vowel, check if exists in the double syllable dictionary, if not, check if in single dictionary and act accordingly.
+ 
+    if word[:2] == "co" and word[2] in 'eaoui' :
+ 
+        if word[:4] in co_two or word[:5] in co_two or word[:6] in co_two :
