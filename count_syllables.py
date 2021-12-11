@@ -95,3 +95,9 @@ def sylco(word) :
     if word[:2] == "bi" and word[2] in "aeoui" :
         syls+=1
  
+    #10) if ends with "-ian", should be counted as two syllables, except for "-tian" and "-cian"
+ 
+    if word[-3:] == "ian" : 
+    #and (word[-4:] != "cian" or word[-4:] != "tian") :
+        if word[-4:] == "cian" or word[-4:] == "tian" :
+            pass
