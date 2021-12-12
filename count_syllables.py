@@ -109,3 +109,11 @@ def sylco(word) :
     if word[:2] == "co" and word[2] in 'eaoui' :
  
         if word[:4] in co_two or word[:5] in co_two or word[:6] in co_two :
+            syls+=1
+        elif word[:4] in co_one or word[:5] in co_one or word[:6] in co_one :
+            pass
+        else :
+            syls+=1
+ 
+    #12) if starts with "pre-" and is followed by a vowel, check if exists in the double syllable dictionary, if not, check if in single dictionary and act accordingly.
+ 
