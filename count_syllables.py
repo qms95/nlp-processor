@@ -117,3 +117,12 @@ def sylco(word) :
  
     #12) if starts with "pre-" and is followed by a vowel, check if exists in the double syllable dictionary, if not, check if in single dictionary and act accordingly.
  
+    if word[:3] == "pre" and word[3] in 'eaoui' :
+        if word[:6] in pre_one :
+            pass
+        else :
+            syls+=1
+ 
+    #13) check for "-n't" and cross match with dictionary to add syllable.
+ 
+    negative = ["doesn't", "isn't", "shouldn't", "couldn't","wouldn't"]
