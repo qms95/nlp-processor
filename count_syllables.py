@@ -126,3 +126,9 @@ def sylco(word) :
     #13) check for "-n't" and cross match with dictionary to add syllable.
  
     negative = ["doesn't", "isn't", "shouldn't", "couldn't","wouldn't"]
+ 
+    if word[-3:] == "n't" :
+        if word in negative :
+            syls+=1
+        else :
+            pass  
