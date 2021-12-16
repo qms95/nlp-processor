@@ -132,3 +132,8 @@ def sylco(word) :
             syls+=1
         else :
             pass  
+ 
+    #14) Handling the exceptional words.
+ 
+    if word in exception_del :
+        disc+=1
