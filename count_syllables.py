@@ -137,3 +137,9 @@ def sylco(word) :
  
     if word in exception_del :
         disc+=1
+ 
+    if word in exception_add :
+        syls+=1    
+ 
+    # calculate the output
+    return numVowels - disc + syls
