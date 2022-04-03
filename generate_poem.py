@@ -19,3 +19,11 @@ class PoemGenerator(object):
         self.inflect_engine = inflect.engine()
         self.read_corpus(corpus)
         self.bigrams = list(nltk.bigrams(self.words))
+        self.cfd = nltk.ConditionalFreqDist(self.bigrams)
+        self.history = []
+
+    def read_corpus(self, corpus):
+        """Given filename of corpus, populate words, all_words, and sents."""
+        if corpus.endswith('.csv'):
+            if 'buzzfeed_facebook_statuses' in corpus:
+                return self.read_buzzfeed_corpus(corpus)
