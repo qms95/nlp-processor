@@ -27,3 +27,12 @@ class PoemGenerator(object):
         if corpus.endswith('.csv'):
             if 'buzzfeed_facebook_statuses' in corpus:
                 return self.read_buzzfeed_corpus(corpus)
+            else:
+                return self.read_csv_corpus(corpus)
+        elif corpus.endswith('.txt'):
+            return self.read_txt_corpus(corpus)
+        else:
+            raise TypeError(('Unrecognized corpus file type: %s.' % corpus) +
+                            '".txt" and ".csv" are only supported')
+
+    def read_txt_corpus(self, corpus):
