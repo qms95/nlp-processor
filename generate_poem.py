@@ -43,3 +43,11 @@ class PoemGenerator(object):
             self.sents.extend(sents)
             self.words.extend(words)
             self.all_words.extend([word for word in words
+                                   if not
+                                   self.only_punctuation.match(word)])
+
+    def read_csv_corpus(self, corpus):
+        raise NotImplementedError('Haven\'t implemented generic csv reading')
+
+    def read_buzzfeed_corpus(self, corpus):
+        with open(corpus, newline='', encoding='utf-8') as statuses:
