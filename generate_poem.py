@@ -36,3 +36,10 @@ class PoemGenerator(object):
                             '".txt" and ".csv" are only supported')
 
     def read_txt_corpus(self, corpus):
+        with codecs.open(corpus, 'r', 'utf-8') as corpus_content:
+            text = corpus_content.read()
+            sents = nltk.tokenize.sent_tokenize(text)
+            words = nltk.tokenize.word_tokenize(text)
+            self.sents.extend(sents)
+            self.words.extend(words)
+            self.all_words.extend([word for word in words
