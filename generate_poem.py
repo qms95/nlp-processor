@@ -61,3 +61,12 @@ class PoemGenerator(object):
                              self.inflect_engine.number_to_words(int(word)))
                              if word.isdigit() else word for word in title]
                     self.sents.append(title)
+                    self.words.extend(title)
+                    # all_words only contains words, no punctuation
+                    self.all_words.extend([word for word in title
+                                           if not
+                                           self.only_punctuation.match(word)])
+
+    def markov(self, word, n):
+        if n > 0:
+            print(word,)
