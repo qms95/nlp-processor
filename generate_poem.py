@@ -51,3 +51,13 @@ class PoemGenerator(object):
 
     def read_buzzfeed_corpus(self, corpus):
         with open(corpus, newline='', encoding='utf-8') as statuses:
+            reader = csv.reader(statuses, delimiter=',')
+            for row in reader:
+                if 'via buzzfeed ' not in row[1].lower():  # only English
+                    # split title into a list of words and punctuation
+                    title = self.spaces_and_punctuation.findall(row[2])
+                    # spell out digits into ordinal words for syllable counting
+                    title = [string.capwords(
+                             self.inflect_engine.number_to_words(int(word)))
+                             if word.isdigit() else word for word in title]
+                    self.sents.append(title)
