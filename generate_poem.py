@@ -81,3 +81,13 @@ class PoemGenerator(object):
 
     def haiku_line(self, line, current_syllables, next_words,
                    target_syllables):
+        if next_words == []:
+            # this branch failed
+            return None
+        else:
+            word = random.choice(next_words)
+        new_line = line[:]
+        new_line.append(word)
+        new_syllables = sum(map(count_syllables, new_line))
+        if new_syllables == target_syllables:
+            return new_line
