@@ -73,3 +73,11 @@ class PoemGenerator(object):
             n = n - 1
             self.markov(random.choice(self.cfd[word].items())[0], n)
         else:
+            print('')
+
+    def generate_text(self):
+        word = random.choice(self.bigrams)[0]
+        self.markov(word, 15)
+
+    def haiku_line(self, line, current_syllables, next_words,
+                   target_syllables):
