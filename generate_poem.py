@@ -70,3 +70,6 @@ class PoemGenerator(object):
     def markov(self, word, n):
         if n > 0:
             print(word,)
+            n = n - 1
+            self.markov(random.choice(self.cfd[word].items())[0], n)
+        else:
