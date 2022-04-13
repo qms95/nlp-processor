@@ -91,3 +91,8 @@ class PoemGenerator(object):
         new_syllables = sum(map(count_syllables, new_line))
         if new_syllables == target_syllables:
             return new_line
+        elif new_syllables > target_syllables:
+            new_next_words = next_words[:]
+            new_next_words.remove(word)
+            return self.haiku_line(line, current_syllables, new_next_words,
+                                   target_syllables)
