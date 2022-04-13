@@ -96,3 +96,10 @@ class PoemGenerator(object):
             new_next_words.remove(word)
             return self.haiku_line(line, current_syllables, new_next_words,
                                    target_syllables)
+        else:
+            new_next_words = [freq[0] for freq in self.cfd[word].items()
+                              if not self.only_punctuation.match(freq[0])]
+            branch = self.haiku_line(new_line, new_syllables, new_next_words,
+                                     target_syllables)
+            if branch:
+                return branch
