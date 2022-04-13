@@ -103,3 +103,13 @@ class PoemGenerator(object):
                                      target_syllables)
             if branch:
                 return branch
+            else:
+                new_next_words = next_words[:]
+                new_next_words.remove(word)
+                return self.haiku_line(line, current_syllables, new_next_words,
+                                       target_syllables)
+
+    def generate_haiku(self):
+        haiku = ''
+        first = self.haiku_line([], 0, self.all_words, 5)
+        haiku = haiku + ' '.join(first) + '\n'
