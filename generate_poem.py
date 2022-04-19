@@ -143,3 +143,4 @@ class PoemGenerator(object):
 if __name__ == '__main__':
     generator = PoemGenerator(corpus='buzzfeed_facebook_statuses.csv')
     haiku = generator.generate_haiku()
+    print(haiku)
