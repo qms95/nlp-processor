@@ -137,3 +137,9 @@ class PoemGenerator(object):
                           if not self.only_punctuation.match(freq[0])]
             next = self.haiku_line([], 0, next_words, random_syllables)
             print(' '.join(next))
+        self.generate_endless_poem(next)
+
+
+if __name__ == '__main__':
+    generator = PoemGenerator(corpus='buzzfeed_facebook_statuses.csv')
+    haiku = generator.generate_haiku()
