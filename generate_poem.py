@@ -126,3 +126,14 @@ class PoemGenerator(object):
         third = self.haiku_line([], 0, next_words, 5)
         haiku = haiku + ' '.join(third) + '\n'
         return haiku
+
+    def generate_endless_poem(self, previous_line):
+        random_syllables = random.choice(range(1, 26))
+        if previous_line is None:
+            next = self.haiku_line([], 0, self.all_words, random_syllables)
+            print(' '.join(next))
+        else:
+            next_words = [freq[0] for freq in self.cfd[previous_line[-1]].items()
+                          if not self.only_punctuation.match(freq[0])]
+            next = self.haiku_line([], 0, next_words, random_syllables)
+            print(' '.join(next))
