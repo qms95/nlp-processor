@@ -11,3 +11,7 @@ def main():
     word = random.choice(bigrams)[0]
     for i in range(15):
         print word,
+        word = cfdist[word].max()
+
+if __name__ == '__main__':
+    main()
