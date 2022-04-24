@@ -9,3 +9,13 @@ def main(text):
     bigrams = list(nltk.bigrams(
         [token for token in nltk.word_tokenize(text.decode('utf8'))
          if set(token).difference(set(string.punctuation))]))
+    cfdist = nltk.ConditionalFreqDist(bigrams)
+    word = random.choice(bigrams)[0]
+    for i in range(155):
+        print word,
+        if i % 3:
+            top_words = tuple(cfdist[word])
+        else:
+            dist = cfdist[word].copy()
+            top_words = []
+            for i in range(3):
