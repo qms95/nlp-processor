@@ -19,3 +19,9 @@ def main(text):
             dist = cfdist[word].copy()
             top_words = []
             for i in range(3):
+                if dist:
+                    top_words.append(dist.max())
+                    del dist[top_words[-1]]
+                else:
+                    break
+        word = random.choice(top_words)
