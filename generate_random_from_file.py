@@ -25,3 +25,8 @@ def main(text):
                 else:
                     break
         word = random.choice(top_words)
+
+if __name__ == '__main__':
+    file = sys.argv[1]
+    with open(file, 'r') as f:
+        main(f.read())
