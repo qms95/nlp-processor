@@ -4,4 +4,4 @@ import json
 import sys
 
 
-def get_
+def get_text_fr
