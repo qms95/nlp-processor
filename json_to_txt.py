@@ -1,1 +1,1 @@
-# Converts a json twitter dump to raw t
+# Converts a json twitter dump to raw text file.
