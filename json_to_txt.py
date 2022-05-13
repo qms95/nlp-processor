@@ -5,4 +5,4 @@ import sys
 
 
 def get_text_from_json(filename):
-    wi
+    with codecs.o
