@@ -5,4 +5,4 @@ import sys
 
 
 def get_text_from_json(filename):
-    with codecs.open(filename, 'r'
+    with codecs.open(filename, 'r', 'utf-8'
