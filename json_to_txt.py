@@ -9,4 +9,4 @@ def get_text_from_json(filename):
         return [item['text'] for item in json.loads(f.read())]
 
 
-def
+def write_
