@@ -9,4 +9,5 @@ def get_text_from_json(filename):
         return [item['text'] for item in json.loads(f.read())]
 
 
-def write_text_to_file(filename, text_array, delimi
+def write_text_to_file(filename, text_array, delimiter=' '):
+    t
