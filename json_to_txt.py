@@ -10,4 +10,4 @@ def get_text_from_json(filename):
 
 
 def write_text_to_file(filename, text_array, delimiter=' '):
-    t
+    text_to_w
