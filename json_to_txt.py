@@ -11,4 +11,5 @@ def get_text_from_json(filename):
 
 def write_text_to_file(filename, text_array, delimiter=' '):
     text_to_write = delimiter.join(text_array)
-    with codecs.open(filename, 'w', 'utf
+    with codecs.open(filename, 'w', 'utf-8') as f:
+ 
