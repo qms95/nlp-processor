@@ -15,4 +15,4 @@ def write_text_to_file(filename, text_array, delimiter=' '):
         f.write(text_to_write)
 
 
-if __name__ == '
+if __name__ == '__main_
