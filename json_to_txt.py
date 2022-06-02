@@ -16,4 +16,4 @@ def write_text_to_file(filename, text_array, delimiter=' '):
 
 
 if __name__ == '__main__':
-    text_array = ge
+    text_array = get_text_from
