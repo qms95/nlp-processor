@@ -14,3 +14,17 @@ only some corpora.
 """
 import codecs
 import sys
+from collections import OrderedDict
+from itertools import islice
+
+import nltk  # TODO: write/import a tokenizer so I don't need to import this
+import numpy as np
+
+
+BEGIN_TOKEN = '__BEGIN__'
+END_TOKEN = '__END__'
+
+
+def load_text(filename):
+    """Return all text from UTF-8 encoded file on disk."""
+    with codecs.open(filename, encoding='utf-8') as corpus:
