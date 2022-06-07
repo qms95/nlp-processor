@@ -28,3 +28,9 @@ END_TOKEN = '__END__'
 def load_text(filename):
     """Return all text from UTF-8 encoded file on disk."""
     with codecs.open(filename, encoding='utf-8') as corpus:
+        return corpus.read()
+
+
+def build_matrix(text, word_dict, state_size=1):
+    matrix = np.zeros((len(word_dict),) * 2, dtype=np.int32)
+    sentences = nltk.sent_tokenize(text)
