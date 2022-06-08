@@ -43,3 +43,17 @@ def build_matrix(text, word_dict, state_size=1):
             sample_index = word_dict[sample]
             matrix[condition_index][sample_index] += 1
     return matrix
+
+
+def unique_words(tokenized_text, case_insensitive=False):
+    """Returns an OrderedDict of all unique words in the given text."""
+    word_set = set()
+    # TODO: not great that I'm doing tokenization and looping over them twice...
+    sentences = nltk.sent_tokenize(text)
+    for sent in sentences:
+        sent = nltk.word_tokenize(sent)
+        for word in sent:
+            if case_insensitive:
+                word = word.lower()
+            word_set.add(word)
+    word_set.update(set([BEGIN_TOKEN, END_TOKEN]))
