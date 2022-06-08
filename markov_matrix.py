@@ -73,3 +73,11 @@ def generate_sentence(matrix, word_dict):
         probs /= probs.sum()
         state = np.random.choice(choices, p=probs)
         if state != word_dict[END_TOKEN]:
+            sent.append(next(islice(word_dict.items(), int(state), None))[0])
+        counter += 1
+    return ' '.join(sent)
+
+
+if __name__ == '__main__':
+    text = load_text(sys.argv[1])
+    word_dict = unique_words(text)
