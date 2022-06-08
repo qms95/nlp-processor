@@ -57,3 +57,11 @@ def unique_words(tokenized_text, case_insensitive=False):
                 word = word.lower()
             word_set.add(word)
     word_set.update(set([BEGIN_TOKEN, END_TOKEN]))
+    return OrderedDict((word, i) for i, word in enumerate(sorted(word_set)))
+
+
+def generate_sentence(matrix, word_dict):
+    sent = []
+    counter = 0
+    choices = np.arange(len(word_dict))
+    # Is it bad to create a new array in the inner loop down there?
