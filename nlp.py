@@ -1,3 +1,3 @@
 from app import app
 
-if __name
+if __name__ ==
