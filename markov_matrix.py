@@ -34,3 +34,12 @@ def load_text(filename):
 def build_matrix(text, word_dict, state_size=1):
     matrix = np.zeros((len(word_dict),) * 2, dtype=np.int32)
     sentences = nltk.sent_tokenize(text)
+    for sent in sentences:
+        sent = [BEGIN_TOKEN] + nltk.word_tokenize(sent) + [END_TOKEN]
+        for i in range(len(sent) - (state_size + 1)):
+            condition = ' '.join(sent[i:(i + state_size)])
+            sample = sent[(i + state_size)]
+            condition_index = word_dict[condition]
+            sample_index = word_dict[sample]
+            matrix[condition_index][sample_index] += 1
+    return matrix
