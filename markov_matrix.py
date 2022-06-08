@@ -81,3 +81,5 @@ def generate_sentence(matrix, word_dict):
 if __name__ == '__main__':
     text = load_text(sys.argv[1])
     word_dict = unique_words(text)
+    matrix = build_matrix(text, word_dict)
+    print(generate_sentence(matrix, word_dict))
