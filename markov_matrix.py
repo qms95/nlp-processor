@@ -65,3 +65,11 @@ def generate_sentence(matrix, word_dict):
     counter = 0
     choices = np.arange(len(word_dict))
     # Is it bad to create a new array in the inner loop down there?
+    #  probs = np.zeros((len(word_dict),), dtype=np.float)
+    state = word_dict[BEGIN_TOKEN]
+    # TODO: it's not finding the end token
+    while state != word_dict[END_TOKEN] and counter != 30:
+        probs = matrix[state].astype(np.float)
+        probs /= probs.sum()
+        state = np.random.choice(choices, p=probs)
+        if state != word_dict[END_TOKEN]:
