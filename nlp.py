@@ -1,3 +1,3 @@
 from app import app
 
-if __name__ ==
+if __name__ == '__main_
