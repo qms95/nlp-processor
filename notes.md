@@ -1,3 +1,3 @@
 What needs to be improved about this repo:
 
-Generalize 
+Generalize and sta
