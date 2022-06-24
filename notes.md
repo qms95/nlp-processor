@@ -1,3 +1,3 @@
 What needs to be improved about this repo:
 
-Generalize and standardize the step
+Generalize and standardize the steps in a
