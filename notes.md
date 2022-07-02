@@ -4,4 +4,4 @@ Generalize and standardize the steps in an NLP pipeline into python classes and
 functions. I can think of these off the top of my head:
 
 * Scraper - get text from the internet to local file
-* Cleaner - cl
+* Cleaner - clean raw text o
