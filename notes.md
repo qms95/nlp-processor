@@ -5,4 +5,5 @@ functions. I can think of these off the top of my head:
 
 * Scraper - get text from the internet to local file
 * Cleaner - clean raw text of non-corpus text
-* Ngramer - assemble text in python list of l
+* Ngramer - assemble text in python list of lists
+* Cfd
