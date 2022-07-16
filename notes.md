@@ -7,4 +7,4 @@ functions. I can think of these off the top of my head:
 * Cleaner - clean raw text of non-corpus text
 * Ngramer - assemble text in python list of lists
 * Cfdister - restructure data into a conditional frequency distribution
-* Other? - re
+* Other? - restructur
