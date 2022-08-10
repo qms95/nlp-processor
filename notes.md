@@ -8,4 +8,5 @@ functions. I can think of these off the top of my head:
 * Ngramer - assemble text in python list of lists
 * Cfdister - restructure data into a conditional frequency distribution
 * Other? - restructure data by other metric (rhyming, similarity, etc.)
-* Assembler loop - takes structure above and outputs on
+* Assembler loop - takes structure above and outputs one word
+    - Mayb
