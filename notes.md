@@ -9,4 +9,4 @@ functions. I can think of these off the top of my head:
 * Cfdister - restructure data into a conditional frequency distribution
 * Other? - restructure data by other metric (rhyming, similarity, etc.)
 * Assembler loop - takes structure above and outputs one word
-    - Mayb
+    - Maybe should
