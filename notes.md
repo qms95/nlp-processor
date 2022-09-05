@@ -10,4 +10,6 @@ functions. I can think of these off the top of my head:
 * Other? - restructure data by other metric (rhyming, similarity, etc.)
 * Assembler loop - takes structure above and outputs one word
     - Maybe should wrap in a sentence loop, line-by-line loop, paragraph loop,
-   
+      etc.
+
+S
