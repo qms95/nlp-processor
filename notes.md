@@ -12,4 +12,4 @@ functions. I can think of these off the top of my head:
     - Maybe should wrap in a sentence loop, line-by-line loop, paragraph loop,
       etc.
 
-Syntax aware generate is actually pretty bad. I think i
+Syntax aware generate is actually pretty bad. I think it forces
