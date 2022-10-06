@@ -13,4 +13,4 @@ functions. I can think of these off the top of my head:
       etc.
 
 Syntax aware generate is actually pretty bad. I think it forces it to be too
-random. Th
+random. The POS 
