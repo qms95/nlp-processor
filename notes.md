@@ -13,4 +13,6 @@ functions. I can think of these off the top of my head:
       etc.
 
 Syntax aware generate is actually pretty bad. I think it forces it to be too
-random. The POS tagging is too error prone and fine-detailed
+random. The POS tagging is too error prone and fine-detailed.
+
+Ideas 
