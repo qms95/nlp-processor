@@ -15,4 +15,6 @@ functions. I can think of these off the top of my head:
 Syntax aware generate is actually pretty bad. I think it forces it to be too
 random. The POS tagging is too error prone and fine-detailed.
 
-Ideas for the fut
+Ideas for the future:
+
+Pi
