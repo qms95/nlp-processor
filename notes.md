@@ -18,4 +18,4 @@ random. The POS tagging is too error prone and fine-detailed.
 Ideas for the future:
 
 Pick one or two lines of the haiku from actual haiku or other poems. Then add a
-line 
+line or two from 
