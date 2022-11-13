@@ -18,4 +18,5 @@ random. The POS tagging is too error prone and fine-detailed.
 Ideas for the future:
 
 Pick one or two lines of the haiku from actual haiku or other poems. Then add a
-line or two from the corpus (e.g. trump tweets) that both fits the syllables
+line or two from the corpus (e.g. trump tweets) that both fits the syllables and
+rhymes
