@@ -20,4 +20,4 @@ Ideas for the future:
 Pick one or two lines of the haiku from actual haiku or other poems. Then add a
 line or two from the corpus (e.g. trump tweets) that both fits the syllables and
 rhymes with the end(s) of the real poetic line. I think both sources could be
-ngram generated, but I think i
+ngram generated, but I think it wou
