@@ -23,4 +23,5 @@ rhymes with the end(s) of the real poetic line. I think both sources could be
 ngram generated, but I think it would be ideal if they were picked wholesale
 from the source. The problem with that approach is that you'd also have to find
 a common word between the two source extractions so that the sentence doesn't
-abruptly shift between lines. Or, maybe that's a good thing? I guess I shou
+abruptly shift between lines. Or, maybe that's a good thing? I guess I should
+try bo
