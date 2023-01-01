@@ -26,4 +26,4 @@ a common word between the two source extractions so that the sentence doesn't
 abruptly shift between lines. Or, maybe that's a good thing? I guess I should
 try both.
 
-Ma
+Maybe t
