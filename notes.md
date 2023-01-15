@@ -27,4 +27,4 @@ abruptly shift between lines. Or, maybe that's a good thing? I guess I should
 try both.
 
 Maybe try just switching out the nouns, verbs, adjectives, and adverbs leaving
-the rest of the sentenc
+the rest of the sentence st
