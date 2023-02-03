@@ -29,4 +29,4 @@ try both.
 Maybe try just switching out the nouns, verbs, adjectives, and adverbs leaving
 the rest of the sentence structure largely intact after the tree replace?
 
-Use word similarity vectors to construct a sentence (or poem) around 
+Use word similarity vectors to construct a sentence (or poem) around a cen
