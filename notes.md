@@ -30,4 +30,4 @@ Maybe try just switching out the nouns, verbs, adjectives, and adverbs leaving
 the rest of the sentence structure largely intact after the tree replace?
 
 Use word similarity vectors to construct a sentence (or poem) around a central
-theme. E.g. construct something like the buffalo sentence: syntactic
+theme. E.g. construct something like the buffalo sentence: syntactically corre
