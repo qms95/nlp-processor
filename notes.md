@@ -31,4 +31,4 @@ the rest of the sentence structure largely intact after the tree replace?
 
 Use word similarity vectors to construct a sentence (or poem) around a central
 theme. E.g. construct something like the buffalo sentence: syntactically correct
-sentences, and maybe even sem
+sentences, and maybe even semantically m
