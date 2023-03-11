@@ -33,4 +33,4 @@ Use word similarity vectors to construct a sentence (or poem) around a central
 theme. E.g. construct something like the buffalo sentence: syntactically correct
 sentences, and maybe even semantically meaningful sentences, but in a totally
 novel form because of some arbitrary restriction (can only use the word
-"buffalo", or animal
+"buffalo", or animal words, 
