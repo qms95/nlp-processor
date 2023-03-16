@@ -1,1 +1,2 @@
-clic
+click==6.7
+Flask==0.1
