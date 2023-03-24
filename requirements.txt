@@ -2,4 +2,5 @@ click==6.7
 Flask==0.12.2
 gunicorn==19.7.1
 inflect==0.2.5
-itsdangerous
+itsdangerous==0.24
+Jinja2
