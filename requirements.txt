@@ -4,3 +4,4 @@ gunicorn==19.7.1
 inflect==0.2.5
 itsdangerous==0.24
 Jinja2==2.9.6
+MarkupSaf
