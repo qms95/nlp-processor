@@ -7,4 +7,5 @@ Jinja2==2.9.6
 MarkupSafe==1.0
 nltk==3.2.4
 # pyStatParser==0.0.1 manually install from git repo (python2 only)
-six==1.10.
+six==1.10.0
+tqd
