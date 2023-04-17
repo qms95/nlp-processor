@@ -35,3 +35,12 @@ def generate(filename, word_limit=None):
     parser = Parser()
     if not os.path.exists(SYNTAXES_FILE):
         #  sents = nltk.corpus.gutenberg.sents('results.txt')
+        # NOTE: results.txt is a big file of raw text not included in source control, provide your own corpus.
+        with codecs.open(filename, encoding='utf-8') as corpus:
+            sents = nltk.sent_tokenize(corpus.read())
+            if word_limit:
+                sents = [sent for sent in sents if len(sent) < word_limit]
+            sent_limit = min(1500, len(sents))
+            sents[0:sent_limit]
+            for sent in tqdm(sents):
+                try:
