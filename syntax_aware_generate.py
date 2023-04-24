@@ -44,3 +44,12 @@ def generate(filename, word_limit=None):
             sents[0:sent_limit]
             for sent in tqdm(sents):
                 try:
+                    parsed = parser.parse(sent)
+                except TypeError:
+                    pass
+                syntax_signature(parsed, save=True)
+        with open(SYNTAXES_FILE, 'wb+') as pickle_file:
+            pickle.dump(syntaxes, pickle_file)
+    else:
+        with open(SYNTAXES_FILE, 'rb+') as pickle_file:
+            syntaxes = pickle.load(pickle_file)
