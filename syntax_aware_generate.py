@@ -53,3 +53,14 @@ def generate(filename, word_limit=None):
     else:
         with open(SYNTAXES_FILE, 'rb+') as pickle_file:
             syntaxes = pickle.load(pickle_file)
+
+    if not os.path.exists(CFDS_FILE):
+        with codecs.open(filename, encoding='utf-8') as corpus:
+            cfds = [make_cfd(corpus.read(), i, exclude_punctuation=False, case_insensitive=True) for i in range(2, 5)]
+            with open(CFDS_FILE, 'wb+') as pickle_file:
+                pickle.dump(cfds, pickle_file)
+    else:
+        with open(CFDS_FILE, 'rb+') as pickle_file:
+            cfds = pickle.load(pickle_file)
+
+    sents = nltk.corpus.gutenberg.sents('austen-emma.txt')
