@@ -73,3 +73,7 @@ def generate(filename, word_limit=None):
     replaced_tree = tree_replace(parsed, cfds, [])
     print('=' * 30)
     print(' '.join(replaced_tree.leaves()))
+    print(replaced_tree)
+
+
+def list_to_string(l):
