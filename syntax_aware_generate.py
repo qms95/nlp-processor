@@ -64,3 +64,12 @@ def generate(filename, word_limit=None):
             cfds = pickle.load(pickle_file)
 
     sents = nltk.corpus.gutenberg.sents('austen-emma.txt')
+    if word_limit:
+        sents = [sent for sent in sents if len(sent) < word_limit]
+    sent = random.choice(sents)
+    parsed = parser.parse(' '.join(sent))
+    print(parsed)
+    print(' '.join(parsed.leaves()))
+    replaced_tree = tree_replace(parsed, cfds, [])
+    print('=' * 30)
+    print(' '.join(replaced_tree.leaves()))
