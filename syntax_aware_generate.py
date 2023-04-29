@@ -77,3 +77,9 @@ def generate(filename, word_limit=None):
 
 
 def list_to_string(l):
+    return str(l).replace(" ", "").replace("'", "")
+
+
+def syntax_signature(tree, save=False):
+    return list_to_string(syntax_signature_recurse(tree, save=save))
+
