@@ -83,3 +83,12 @@ def list_to_string(l):
 def syntax_signature(tree, save=False):
     return list_to_string(syntax_signature_recurse(tree, save=save))
 
+
+def syntax_signature_recurse(tree, save=False):
+    global syntaxes
+    if type(tree) is Tree:
+        label = tree.label()
+        if label == ',':
+            label = 'COMMA'
+        children = [syntax_signature_recurse(child, save=save) for child in tree if type(child) is Tree]
+        if not children:
