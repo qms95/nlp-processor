@@ -92,3 +92,9 @@ def syntax_signature_recurse(tree, save=False):
             label = 'COMMA'
         children = [syntax_signature_recurse(child, save=save) for child in tree if type(child) is Tree]
         if not children:
+            if save:
+                syntaxes[label].add(tree)
+            return label
+        else:
+            if save:
+                syntaxes[list_to_string([label, children])].add(tree)
