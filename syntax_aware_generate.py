@@ -98,3 +98,11 @@ def syntax_signature_recurse(tree, save=False):
         else:
             if save:
                 syntaxes[list_to_string([label, children])].add(tree)
+            return [label, children]
+    else:
+        raise ValueError('Not a nltk.tree.Tree: {}'.format(tree))
+
+
+def tree_replace(tree, cfds, preceding_children=[]):
+    condition_search = ' '.join([' '.join(child.leaves()) for child in preceding_children]).lower()
+    sig = syntax_signature(tree)
