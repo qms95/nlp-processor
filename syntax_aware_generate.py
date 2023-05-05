@@ -106,3 +106,9 @@ def syntax_signature_recurse(tree, save=False):
 def tree_replace(tree, cfds, preceding_children=[]):
     condition_search = ' '.join([' '.join(child.leaves()) for child in preceding_children]).lower()
     sig = syntax_signature(tree)
+    if sig in syntaxes:
+        matching_fragments = tuple(syntaxes[sig])
+        if len(matching_fragments) > 1 and condition_search:
+            matching_leaves = [' '.join(frag.leaves()) for frag in matching_fragments]
+            most_common = get_most_common(condition_search, cfds)
+            candidates = list(set(matching_leaves).intersection(set(most_common)))
