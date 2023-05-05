@@ -112,3 +112,13 @@ def tree_replace(tree, cfds, preceding_children=[]):
             matching_leaves = [' '.join(frag.leaves()) for frag in matching_fragments]
             most_common = get_most_common(condition_search, cfds)
             candidates = list(set(matching_leaves).intersection(set(most_common)))
+            if candidates:
+                return Tree(tree.label(), [random.choice(candidates)])
+            # find the first element of get_most_common that is also in this list of matching_leaves
+        return random.choice(matching_fragments)
+    else:
+        children = [tree_replace(child, cfds, preceding_children + tree[0:i])
+                    for i, child in enumerate(tree) if type(child) is Tree]
+        if not children:
+            # unable to replace this leaf
+            return tree
