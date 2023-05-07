@@ -131,3 +131,9 @@ def tree_replace(tree, cfds, preceding_children=[]):
 def make_cfd(text, n, cfd=None, exclude_punctuation=True, case_insensitive=True):
     if not cfd:
         cfd = {}
+    if exclude_punctuation:
+        nopunct = re.compile('^\w+$')
+    sentences = nltk.sent_tokenize(text)
+    for sent in sentences:
+        sent = nltk.word_tokenize(sent)
+        if case_insensitive:
