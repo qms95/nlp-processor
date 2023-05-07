@@ -122,3 +122,12 @@ def tree_replace(tree, cfds, preceding_children=[]):
         if not children:
             # unable to replace this leaf
             return tree
+        else:
+            return Tree(tree.label(), children)
+
+
+# TODO: this part should definitely be in a different class or module. I need to be able to resuse this method
+# among all of my nlp expirements. See notes in this repo for more detail.
+def make_cfd(text, n, cfd=None, exclude_punctuation=True, case_insensitive=True):
+    if not cfd:
+        cfd = {}
