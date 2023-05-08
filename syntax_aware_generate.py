@@ -137,3 +137,14 @@ def make_cfd(text, n, cfd=None, exclude_punctuation=True, case_insensitive=True)
     for sent in sentences:
         sent = nltk.word_tokenize(sent)
         if case_insensitive:
+            sent = [word.lower() for word in sent]
+        if exclude_punctuation:
+            sent = [word for word in sent if nopunct.match(word)]
+        for i in range(len(sent) - (n - 1)):
+            condition = ' '.join(sent[i:(i + n) - 1])
+            sample = sent[(i + n) - 1]
+            if condition in cfd:
+                if sample in cfd[condition]:
+                    cfd[condition][sample] += 1
+                else:
+                    cfd[condition].update({sample: 1})
