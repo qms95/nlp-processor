@@ -148,3 +148,15 @@ def make_cfd(text, n, cfd=None, exclude_punctuation=True, case_insensitive=True)
                     cfd[condition][sample] += 1
                 else:
                     cfd[condition].update({sample: 1})
+            else:
+                cfd[condition] = {sample: 1}
+    return cfd
+
+
+def get_most_common(search, cfds, most_common=None):
+    if not most_common:
+        most_common = list()
+    words = search.split(' ')
+    for i in reversed(range(len(cfds))):
+        n = i + 2
+        if len(words) >= (n - 1):
