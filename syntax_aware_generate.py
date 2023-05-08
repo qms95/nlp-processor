@@ -160,3 +160,11 @@ def get_most_common(search, cfds, most_common=None):
     for i in reversed(range(len(cfds))):
         n = i + 2
         if len(words) >= (n - 1):
+            query = ' '.join(words[len(words) - (n - 1):])
+            if query in cfds[i]:
+                most_common.extend([entry[0] for entry in sorted(cfds[i][query].items(),
+                                                                 key=operator.itemgetter(1),
+                                                                 reverse=True)
+                                    if entry[0] not in most_common])
+    return most_common
+
