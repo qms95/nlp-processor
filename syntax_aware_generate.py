@@ -168,3 +168,6 @@ def get_most_common(search, cfds, most_common=None):
                                     if entry[0] not in most_common])
     return most_common
 
+
+if __name__ == '__main__':
+    generate(sys.argv[1])
