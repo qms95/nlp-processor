@@ -24,3 +24,11 @@ def load_text_files(dirname):
 
 def load_syntax(dirname):
     full_text = ''
+    for text in load_text_files(dirname):
+        full_text += text
+    return nlp(full_text)
+
+
+def load_object_to_file(filename):
+    with open(filename, 'rb') as f:
+        return pickle.load(f)
