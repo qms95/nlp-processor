@@ -47,3 +47,13 @@ def build_content_dict(content_syntax):
         if word.dep not in content_dict[word.tag]:
             content_dict[word.tag][word.dep] = set()
         content_dict[word.tag][word.dep].add(word)
+    return content_dict
+
+
+def find_closest_content_word(template_word, content_dict):
+    closest = None
+    closest_score = 0.0
+
+    if template_word.tag in content_dict:
+        if template_word.dep in content_dict[template_word.tag]:
+            content_word_set = content_dict[template_word.tag][template_word.dep]
