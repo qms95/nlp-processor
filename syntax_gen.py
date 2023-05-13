@@ -57,3 +57,10 @@ def find_closest_content_word(template_word, content_dict):
     if template_word.tag in content_dict:
         if template_word.dep in content_dict[template_word.tag]:
             content_word_set = content_dict[template_word.tag][template_word.dep]
+        else:
+            random_dep = random.choice(list(content_dict[template_word.tag].keys()))
+            content_word_set = content_dict[template_word.tag][random_dep]
+    else:
+        return None
+
+    for content_word in content_word_set:
