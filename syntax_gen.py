@@ -32,3 +32,18 @@ def load_syntax(dirname):
 def load_object_to_file(filename):
     with open(filename, 'rb') as f:
         return pickle.load(f)
+
+
+def save_object_to_file(filename, object):
+    with open(filename, 'wb') as f:
+        pickle.dump(object, f)
+
+
+def build_content_dict(content_syntax):
+    content_dict = {}
+    for word in content_syntax:
+        if word.tag not in content_dict:
+            content_dict[word.tag] = {}
+        if word.dep not in content_dict[word.tag]:
+            content_dict[word.tag][word.dep] = set()
+        content_dict[word.tag][word.dep].add(word)
