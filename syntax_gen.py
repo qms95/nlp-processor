@@ -64,3 +64,8 @@ def find_closest_content_word(template_word, content_dict):
         return None
 
     for content_word in content_word_set:
+        if closest is None or template_word.similarity(content_word) > closest_score:
+            closest = content_word
+            closest_score = template_word.similarity(content_word)
+
+    return closest
