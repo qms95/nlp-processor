@@ -69,3 +69,13 @@ def find_closest_content_word(template_word, content_dict):
             closest_score = template_word.similarity(content_word)
 
     return closest
+
+
+if __name__ == '__main__':
+    if os.path.exists('template_syntax.bin'):
+        print('Loading parsed template corpus... ', end='')
+        template_syntax = spacy.tokens.Doc(spacy.vocab.Vocab())
+        template_syntax.from_disk('template_syntax.bin')
+        print('Done')
+    else:
+        print('Parsing template corpus... ', end='')
