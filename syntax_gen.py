@@ -87,3 +87,9 @@ if __name__ == '__main__':
         print('Loading parsed content corpus... ', end='')
         content_syntax = spacy.tokens.Doc(spacy.vocab.Vocab())
         content_syntax.from_disk('content_syntax.bin')
+        print('Done')
+    else:
+        print('Parsing content corpus... ', end='')
+        content_syntax = load_syntax(CONTENT_CORPUS)
+        content_syntax.to_disk('content_syntax.bin')
+        print('Done')
