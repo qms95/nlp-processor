@@ -82,3 +82,8 @@ if __name__ == '__main__':
         template_syntax = load_syntax(TEMPLATE_CORPUS)
         template_syntax.to_disk('template_syntax.bin')
         print('Done')
+
+    if os.path.exists('content_syntax.bin'):
+        print('Loading parsed content corpus... ', end='')
+        content_syntax = spacy.tokens.Doc(spacy.vocab.Vocab())
+        content_syntax.from_disk('content_syntax.bin')
