@@ -79,3 +79,6 @@ if __name__ == '__main__':
         print('Done')
     else:
         print('Parsing template corpus... ', end='')
+        template_syntax = load_syntax(TEMPLATE_CORPUS)
+        template_syntax.to_disk('template_syntax.bin')
+        print('Done')
