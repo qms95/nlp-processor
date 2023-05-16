@@ -104,3 +104,5 @@ if __name__ == '__main__':
         if closest_word:
             print(closest_word.text_with_ws, end='')
         else:
+            print('<NOMATCH> ', end='')
+    import ipdb; ipdb.set_trace()
