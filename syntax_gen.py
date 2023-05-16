@@ -93,3 +93,14 @@ if __name__ == '__main__':
         content_syntax = load_syntax(CONTENT_CORPUS)
         content_syntax.to_disk('content_syntax.bin')
         print('Done')
+
+    print('Building content_dict... ', end='')
+    content_dict = build_content_dict(content_syntax)
+    save_object_to_file('content_dict.bin', content_dict)
+    print('Done')
+
+    for template_word in template_syntax[0:100]:
+        closest_word = find_closest_content_word(template_word, content_dict)
+        if closest_word:
+            print(closest_word.text_with_ws, end='')
+        else:
